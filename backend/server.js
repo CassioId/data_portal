@@ -9,6 +9,7 @@
    const localidadesRoutes = require('./routes/localidadesRoutes');
    const agregadosRoutes = require('./routes/agregadosRoutes');
    const relatoriosRoutes = require('./routes/relatoriosRoutes');
+   const sincronizacaoRoutes = require('./routes/sincronizacaoRoutes')
 
    const app = express();
    const PORT = process.env.PORT || 5000;
@@ -23,6 +24,7 @@
    app.use('/api/localidades', localidadesRoutes);
    app.use('/api/agregados', agregadosRoutes);
    app.use('/api/relatorios', relatoriosRoutes);
+   app.use('/api/sincronizacao', sincronizacaoRoutes);
 
    // Preparar para produção
    if (process.env.NODE_ENV === 'production') {

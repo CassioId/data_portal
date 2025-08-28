@@ -1,0 +1,174 @@
+/* Footer.css */
+
+.app-footer {
+  background-color: #1e3a8a;
+  color: #f0f0f0;
+  padding-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: white;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+/* Adiciona uma linha decorativa abaixo dos títulos */
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #3b82f6;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link-item {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.footer-icon {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.external-icon {
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 32px 0 24px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.footer-logo {
+  margin-right: 24px;
+}
+
+.footer-logo-image {
+  max-height: 60px;
+  max-width: 100%;
+}
+
+.footer-credits {
+  flex-grow: 1;
+}
+
+.footer-paragraph {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #cbd5e0;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #a0aec0;
+}
+
+.copyright-link {
+  color: #90cdf4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.copyright-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsividade para telas médias */
+@media (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 576px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+/* Efeito hover para links */
+.footer-link {
+  position: relative;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Acessibilidade - Estados de foco visíveis */
+.footer-link:focus,
+.copyright-link:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
